@@ -1,11 +1,11 @@
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
         
         :root {
             --primary: #00d4aa;
         }
         
         body {
-            font-family: 'Inter', system_ui, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
         }
         
         .heading-font {
@@ -60,4 +60,283 @@
 
         .section-header {
             animation: fadeIn 0.6s ease-out;
+        }
+
+        #history .transaction-table {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        #history .transaction-table table {
+            min-width: 34rem;
+        }
+
+        @media (max-width: 1023px) {
+            .navbar-content {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .navbar-content > :first-child {
+                order: 1;
+            }
+
+            .navbar-content > :last-child {
+                order: 2;
+                margin-left: auto;
+            }
+
+            .navbar-content .nav-links {
+                order: 3;
+                flex-basis: 100%;
+                gap: 1.5rem;
+                overflow-x: auto;
+                padding-bottom: 0.25rem;
+                scrollbar-width: thin;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links .nav-link {
+                flex: 0 0 auto;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #auth-screen {
+                padding: 1rem;
+            }
+
+            #auth-screen > div {
+                max-width: 26rem;
+            }
+
+            #auth-screen .bank-card {
+                padding: 1.25rem;
+            }
+
+            #auth-screen .heading-font {
+                font-size: clamp(1.75rem, 8vw, 2.5rem);
+                text-align: center;
+            }
+
+            #navbar .navbar-content {
+                padding-right: 1rem;
+                padding-left: 1rem;
+                gap: 0.75rem;
+            }
+
+            #navbar .navbar-content > :first-child {
+                min-width: 0;
+                gap: 0.5rem;
+            }
+
+            #navbar .navbar-content > :first-child > div {
+                flex: 0 0 auto;
+            }
+
+            #navbar .navbar-content h1 {
+                font-size: 1.25rem;
+                white-space: nowrap;
+            }
+
+            #navbar #user-info {
+                display: none;
+            }
+
+            #navbar .navbar-content > :last-child {
+                gap: 0;
+            }
+
+            #navbar .navbar-content > :last-child > button {
+                padding: 0.5rem 0.75rem;
+            }
+
+            #navbar .nav-links {
+                gap: 1.25rem;
+                font-size: 0.8125rem;
+            }
+
+            #dashboard,
+            #transfer,
+            #history,
+            #cards,
+            #loans {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+
+            #dashboard .dashboard-header {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 1.25rem;
+            }
+
+            #dashboard .dashboard-header h2,
+            #app-screen > div > h2 {
+                font-size: clamp(1.75rem, 7vw, 2.5rem);
+                line-height: 1.15;
+            }
+
+            #dashboard .dashboard-header > :last-child {
+                text-align: left;
+            }
+
+            #balance {
+                font-size: clamp(2rem, 10vw, 3rem);
+                overflow-wrap: anywhere;
+            }
+
+            #dashboard .grid.grid-cols-2 {
+                gap: 0.75rem;
+                margin-bottom: 2rem;
+            }
+
+            #dashboard .grid.grid-cols-2 > div {
+                padding: 1rem;
+                min-width: 0;
+            }
+
+            #dashboard .grid.grid-cols-2 > div .text-2xl {
+                font-size: 1.125rem;
+            }
+
+            #dashboard .grid.grid-cols-2 > div .text-6xl {
+                font-size: 2.5rem;
+            }
+
+            #dashboard .account-card,
+            #dashboard > div:last-child,
+            #transfer .bank-card,
+            #loans > div > div,
+            #profile > div {
+                padding: 1.25rem;
+            }
+
+            #dashboard .account-card > .flex:first-child {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            #dashboard .account-details,
+            #dashboard .account-fields {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            #dashboard .account-details > button {
+                width: 100%;
+                justify-content: center;
+                padding-right: 0.75rem;
+                padding-left: 0.75rem;
+            }
+
+            #dashboard > div:last-child > .flex:first-child {
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            #spending-chart {
+                max-height: 18rem;
+            }
+
+            #history h2 {
+                align-items: flex-start;
+                flex-wrap: wrap;
+                font-size: clamp(1.75rem, 7vw, 2.5rem);
+            }
+
+            .transaction-filters {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .transaction-filters button {
+                padding: 0.5rem 0.75rem;
+            }
+
+            #virtual-card {
+                min-height: 15rem;
+                padding: 1.25rem;
+            }
+
+            #card-number-display {
+                font-size: clamp(1.25rem, 6vw, 2rem);
+                letter-spacing: 0.1em;
+                margin-bottom: 1.5rem;
+                white-space: nowrap;
+            }
+
+            #card-holder-display,
+            #card-expiry-display,
+            #card-cvv-display {
+                font-size: 0.875rem;
+            }
+
+            #freeze-card-btn {
+                gap: 0.75rem;
+                padding: 1.25rem;
+            }
+
+            #freeze-card-btn h4 {
+                font-size: 1.125rem;
+            }
+
+            #freeze-status {
+                padding-right: 0.75rem;
+                padding-left: 0.75rem;
+                white-space: nowrap;
+            }
+
+            #profile {
+                margin-top: 2rem;
+            }
+
+            #profile > div > div:first-child {
+                gap: 1rem;
+            }
+
+            #profile > div > div:first-child > div:last-child {
+                display: none;
+            }
+
+            #profile-account {
+                font-size: 1.25rem;
+                overflow-wrap: anywhere;
+            }
+
+            .toast-notification {
+                right: 1rem;
+                bottom: 1rem;
+                left: 1rem;
+                text-align: center;
+            }
+
+            #deposit-modal > div,
+            #withdraw-modal > div,
+            #billpay-modal > div {
+                max-height: calc(100dvh - 2rem);
+                overflow-y: auto;
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            #navbar .navbar-content h1 {
+                font-size: 1.125rem;
+            }
+
+            #dashboard .grid.grid-cols-2 > div > div:first-child > div:last-child {
+                font-size: 0.6875rem;
+            }
+
+            #card-holder-display {
+                max-width: 8rem;
+                overflow-wrap: anywhere;
+            }
         }

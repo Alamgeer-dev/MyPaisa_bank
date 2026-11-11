@@ -20,13 +20,13 @@
 <body class="bg-gray-950 text-white">
     <!-- NAVBAR -->
     <nav id="navbar" class="hidden bg-black border-b border-white/10 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div class="navbar-content max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-xl font-bold">🌐</div>
                 <h1 class="heading-font text-3xl tracking-tighter"><a href="index.html">My Paisa Bank</a></h1>
             </div>
             
-            <div class="flex items-center gap-8 text-sm font-medium">
+            <div class="nav-links flex items-center gap-8 text-sm font-medium">
                 <button onclick="showSection('dashboard')" class="nav-link flex items-center gap-2">
                     <span>🏠</span>
                     <span>Dashboard</span>
@@ -166,7 +166,7 @@ service cloud.firestore {<br>
 
         <!-- DASHBOARD -->
         <div id="dashboard" class="max-w-7xl mx-auto px-6 py-8">
-            <div class="flex justify-between items-end mb-8">
+            <div class="dashboard-header flex justify-between items-end mb-8">
                 <div>
                     <h2 class="text-4xl heading-font tracking-tighter">Good morning, <span id="greeting-name" class="text-emerald-400"></span></h2>
                     <p class="text-white/60">Here's what's happening with your accounts today</p>
@@ -222,15 +222,15 @@ service cloud.firestore {<br>
             </div>
 
             <!-- Checking Account -->
-            <div class="bg-white/5 rounded-3xl p-8 mb-12">
+            <div class="account-card bg-white/5 rounded-3xl p-8 mb-12">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="font-semibold text-xl">Your Checking Account</h3>
                     <div class="flex items-center gap-2 text-xs font-mono bg-white/10 px-4 py-2 rounded-3xl">
                         <span id="account-number" class="text-emerald-400"></span>
                     </div>
                 </div>
-                <div class="flex items-center justify-between text-sm">
-                    <div class="flex items-center gap-8">
+                <div class="account-details flex items-center justify-between text-sm">
+                    <div class="account-fields flex items-center gap-8">
                         <div>
                             <div class="text-white/60">Account Holder</div>
                             <div id="account-holder" class="font-medium"></div>
@@ -343,7 +343,7 @@ service cloud.firestore {<br>
             </h2>
             
             <!-- Filters -->
-            <div class="flex gap-3 mb-6">
+            <div class="transaction-filters flex gap-3 mb-6">
                 <button onclick="filterTransactions('all')" id="filter-all" class="px-5 py-2 text-sm font-medium bg-white/10 hover:bg-white/20 rounded-3xl active">All</button>
                 <button onclick="filterTransactions('deposit')" id="filter-deposit" class="px-5 py-2 text-sm font-medium bg-white/10 hover:bg-white/20 rounded-3xl">Deposits</button>
                 <button onclick="filterTransactions('withdrawal')" id="filter-withdrawal" class="px-5 py-2 text-sm font-medium bg-white/10 hover:bg-white/20 rounded-3xl">Withdrawals</button>
@@ -352,7 +352,7 @@ service cloud.firestore {<br>
                 <button onclick="filterTransactions('bill')" id="filter-bill" class="px-5 py-2 text-sm font-medium bg-white/10 hover:bg-white/20 rounded-3xl">Bills</button>
             </div>
 
-            <div class="bg-white/5 rounded-3xl overflow-hidden">
+            <div class="transaction-table bg-white/5 rounded-3xl overflow-hidden">
                 <table class="w-full">
                     <thead>
                         <tr class="border-b border-white/10">
